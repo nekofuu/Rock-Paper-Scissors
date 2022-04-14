@@ -18,7 +18,21 @@ function playRound(playerInput, computerInput) {
 }
 
 function getPlayerInput() {
+    let validInput = false;
+    while(!validInput) {
+        let input = prompt("Make a selection:\n0 - rock\n1 - paper\n2 - scissors");
 
+        switch(input) {
+            case "0":
+                return "rock";
+            case "1":
+                return "paper";
+            case "2":
+                return "scissors";
+            default:
+                console.log("Invalid input. Please only use one of the listed options!");
+        }
+    }
 }
 
 function game() {
