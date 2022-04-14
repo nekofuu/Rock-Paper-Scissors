@@ -14,7 +14,17 @@ function computerPlay() {
 }
 
 function playRound(playerInput, computerInput) {
-    
+    console.log("Player (" + playerInput + ") vs Computer(" + computerInput + ")\n");
+
+    if(playerInput === computerInput) {
+        return "draw";
+    } else if (playerInput === "rock") {
+        return (computerInput === "paper" ? "computer" : "player");
+    } else if (playerInput === "paper") {
+        return (computerInput === "rock" ? "player" : "computer");
+    } else if (playerInput === "scissors") {
+        return (computerInput === "rock" ? "computer" : "player");
+    }
 }
 
 function getPlayerInput() {
@@ -43,7 +53,7 @@ function game() {
 
     const SCORE_LIMIT = 3;
 
-    while(playerScore < SCORE_LIMIT || computerScore < SCORE_LIMIT) {
+    while(playerScore < SCORE_LIMIT && computerScore < SCORE_LIMIT) {
         let roundResult = playRound(getPlayerInput(), computerPlay());
 
         switch(roundResult) {
