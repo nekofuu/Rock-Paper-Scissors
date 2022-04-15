@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+
+    background-color: #242629;
+    color: #F7F9F9;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.container {
+    height: 100vh;
+}
+
+/* Header */
+#header {
+    flex: initial;
+}
+
+#header>h1 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Footer */
+#footer {
+    flex: initial;
+}
+
+#footer>p {
+    text-align: center;
+}
+
+main {
+    background-color: #181A1D;
+    flex: auto;
+}
+
+/* Content */
+#content {
+    align-items: center;
+    padding: 50px 0;
+}
+
+/* Scoreboard */
+#scoreboard {
+    text-align: center;
+    gap: 3vw;
+}
+
+.score {
+    flex: 1 1 0;
+    align-items: stretch;
+    justify-content: center;
+
+    border: 2px solid #EC5555;
+    border-radius: 8px;
+}
+
+.score > * {
+    flex: auto;
+}
+
+.score h1 {
+    margin: 0;
+    
+    font-size: 28px;
+
+    background-color: #EC5555;
+}
+
+.score p {
+    margin: 0;
+    padding: 10px 40px;
+
+    font-size: 75px;
+    font-weight: bolder;
+    
+}
+
+/* Options */
+#options {
+    width: 40vw;
+    gap: 5%;
+
+    text-align: center;
+}
+
+.option {
+    border: 2px solid #EC5555;
+    border-radius: 8px;
+
+    flex: 1 1 0;
+}
+
+.option:hover {
+    color: #EC5555;
+}
+
+.option:active {
+    background-color: #34373a;
+}
+
+.option i {
+    padding: 25px;
+
+    font-size: 150px;
+}
+
+/* Summary */
+#summary {
+    border: 2px solid #EC5555;
+    border-radius: 8px;
+
+    width: 40%;
+}
+
+.selection {
+    flex: 0 1 auto;
+    align-items: center;
+
+    padding: 10px;
+}
+
+.selection > i {
+    font-size: 100px;
+}
+
+#player-selection {
+    border-right: 2px solid #EC5555;
+}
+
+#computer-selection {
+    border-left: 2px solid #EC5555;
+}
+
+#msg {
+    padding: 5px 10px;
+
+    font-weight: bold;
+
+    flex: 1 0 auto;
+}

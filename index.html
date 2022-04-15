@@ -5,9 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
 </head>
 <body>
-    
+    <div class="flex flex-column container">
+        <header id="header">
+            <h1>Rock - Paper - Scissors</h1>
+        </header>
+
+        <main id="content" class="flex flex-column space-between">
+            <div id="scoreboard" class="flex">
+                <div class="score flex flex-column">
+                    <h1>YOU</h1>
+                    <p id="playerScore">0</p>
+                </div>
+
+                <div class="score flex flex-column">
+                    <h1>CPU</h1>
+                    <p id="computerScore">0</p>
+                </div>
+            </div>
+
+            <div id="options" class="flex space-between">
+                <div class="option" id="rock">
+                    <i class="fa-solid fa-hand-back-fist"></i>
+                </div>
+
+                <div class="option" id="paper">
+                    <i class="fa-solid fa-hand"></i>
+                </div>
+
+                <div class="option" id="scissors">
+                    <i class="fa-solid fa-hand-scissors"></i>
+                </div>
+            </div>
+
+            <div id="summary" class="flex">
+                <div id="player-selection" class="selection flex">
+                    <i class="fa-solid fa-circle-question"></i>
+                </div>
+
+                <div id="msg">
+                    <p>Choose your weapon!</p>
+                </div>
+
+                <div id="computer-selection" class="selection flex">
+                    <i class="fa-solid fa-circle-question"></i>
+                </div>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Copyright &copy; Joseph Franks 2022</p>
+        </footer>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
