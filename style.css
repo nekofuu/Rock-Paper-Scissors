@@ -132,16 +132,16 @@ main {
     padding: 10px;
 }
 
-.selection > i {
-    font-size: 100px;
-}
-
-#player-selection {
+.selection:first-child {
     border-right: 2px solid #EC5555;
 }
 
-#computer-selection {
+.selection:last-child {
     border-left: 2px solid #EC5555;
+}
+
+.selection > i {
+    font-size: 100px;
 }
 
 #msg {
