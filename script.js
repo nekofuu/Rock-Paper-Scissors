@@ -12,6 +12,10 @@ const SCISSORS_CLASSES = "fa-solid fa-hand-scissors";
 const DEFAULT_CLASSES = "fa-solid fa-circle-question";
 
 // DOM Elements
+const overlay = document.getElementById("overlay");
+const endMsg = document.getElementById("end-msg");
+const playBtn = document.getElementById("play-btn");
+
 const playerScore = document.getElementById("playerScore");
 const computerScore = document.getElementById("computerScore");
 
@@ -25,11 +29,13 @@ const msg = document.getElementById("msg");
 
 //Global Variables
 let pScore = 0, cScore = 0;
+const MAX_SCORE = 5;
 
 // Event listeners
 rock.addEventListener('click', (e) => { PlayRound(e.target, Option.ROCK); });
 paper.addEventListener('click', (e) => { PlayRound(e.target, Option.PAPER); });
 scissors.addEventListener('click', (e) => { PlayRound(e.target, Option.SCISSORS); });
+playBtn.addEventListener('click', NewGame);
 
 function ComputerPlay() {
     return Math.floor(Math.random() * 3);
@@ -107,6 +113,15 @@ function UpdateGame(result) {
 function UpdateScore() {
     playerScore.textContent = pScore;
     computerScore.textContent = cScore;
+
+    // Handle End Condition
+    if(pScore >= MAX_SCORE) {
+        endMsg.textContent = "Congratulations! You won!";
+        overlay.classList.remove("hide");
+    } else if (cScore >= MAX_SCORE) {
+        endMsg.textContent = "Uh oh! You lost!";
+        overlay.classList.remove("hide");
+    }
 }
 
 // Cleans necessary elements for a new game
@@ -116,10 +131,14 @@ function NewGame() {
     playerSelection.className = DEFAULT_CLASSES;
     computerSelection.className = DEFAULT_CLASSES;
 
+    endMsg.textContent = "";
+
     pScore = 0;
     cScore = 0;
 
     UpdateScore();
+
+    overlay.classList.add("hide");
 }
 
 // Cleans necessary elements for a new round
