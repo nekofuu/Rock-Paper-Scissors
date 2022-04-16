@@ -29,8 +29,8 @@ body {
 
 #header>h1 {
     text-align: center;
-    font-size: 4vh;
-    margin: 1vw 0;
+    font-size: clamp(1.2em, 5vmin, 2.8em);
+    margin: 0.5em 0;
 }
 
 /* Footer */
@@ -46,9 +46,8 @@ body {
 #content {
     align-items: center;
     justify-content: center;
-    gap: 3vh;
 
-    padding: 2vh 0;
+    gap: clamp(2px, 2vh, 2em);
 
     background-color: #181A1D;
     flex: auto;
@@ -57,9 +56,9 @@ body {
 /* Scoreboard */
 #scoreboard {
     text-align: center;
-    gap: 2vw;
+    gap: 3vw;
 
-    width: 20%;
+    width: clamp(20vw, 50em, 95vw);
 }
 
 .score {
@@ -78,29 +77,32 @@ body {
 .score h1 {
     margin: 0;
     
-    font-size: 4vh;
+    font-size: clamp(0.5em, 5vmin, 2.2em);
 
     background-color: #EC5555;
 }
 
 .score p {
     margin: 0;
-    padding: 1vw;
+    padding: 10px;
 
-    font-size: 8vh;
+    font-size: clamp(0.2em, 8vmin, 4em);
     font-weight: bolder;
     
 }
 
 /* Options */
 #options {
-    width: 50vw;
+
+    width: clamp(50vw, 60em, 95vw);
     gap: 2vw;
 
     text-align: center;
 }
 
 .option {
+    padding: clamp(2px, 1em, 10px);
+
     border: 2px solid #EC5555;
     border-radius: 8px;
 
@@ -116,8 +118,8 @@ body {
 }
 
 .option i {
-    font-size: 15vh;
-    line-height: 20vh;
+    font-size: clamp(0.2em, 15vmin, 10em);
+    line-height: 1.15em;
 }
 
 /* Summary */
@@ -125,7 +127,7 @@ body {
     border: 2px solid #EC5555;
     border-radius: 8px;
 
-    width: 50vw;
+    width: clamp(50vw, 60em, 95vw);
 }
 
 .selection {
@@ -133,8 +135,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    width: 8vw;
-    padding: 1vw;
+    padding: 1em;
 }
 
 .selection:first-child {
@@ -146,24 +147,24 @@ body {
 }
 
 .selection > i {
-    font-size: 8vw;
+    font-size: clamp(1em, 10vmin, 15em);
 }
 
 #msg {
-    padding: 0.5vw;
+    padding: 0.5em;
 
     font-weight: bold;
-    font-size: 2vh;
 
     flex: 1 1 auto;
 }
 
 #msg p {
     margin: 0;
+    font-size: clamp(0.2em, 3vmin, 4em);
 }
 
 #msg p:not(:first-child) {
-    margin: 1vw 0 0 0;
+    margin: 0.8em 0 0 0;
 }
 
 /* End Screen */
@@ -180,8 +181,8 @@ body {
 }
 
 #end-screen {
-    width: 40vw;
-    height: 40vh;
+    padding: 10px;
+    margin: 10px;
 
     background-color: #242629;
 
@@ -189,14 +190,14 @@ body {
     border-radius: 10px;
 
     color: #F7F9F9;
-    text-align:center;
+    text-align: center;
 
     align-items: center;
     justify-content: center;
 }
 
 #end-msg {
-    font-size: 2vw;
+    font-size: clamp(0.8em, 4vmax, 5em);
     font-weight: bolder;
 }
 
@@ -206,6 +207,7 @@ body {
     background-color: #34373a;
     color: #F7F9F9;
 
+    font-size: clamp(0.8em, 2vmax, 2em);
     font-weight: bolder;
 
     border: 2px solid #EC5555;
