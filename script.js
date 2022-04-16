@@ -26,9 +26,11 @@ const scissors = document.getElementById("scissors");
 const playerSelection = document.getElementById("player-selection");
 const computerSelection = document.getElementById("computer-selection");
 const msg = document.getElementById("msg");
+const roundCount = document.getElementById("round-count");
 
 //Global Variables
 let pScore = 0, cScore = 0;
+let currentRound = 0;
 const MAX_SCORE = 5;
 
 // Event listeners
@@ -42,7 +44,10 @@ function ComputerPlay() {
 }
 
 function PlayRound(playerInput) {
+    currentRound += 1;
     NewRound();
+    
+    roundCount.textContent = currentRound;
 
     let computerInput = ComputerPlay();
     
@@ -96,7 +101,7 @@ function UpdateGame(result) {
         pScore += 1;
 
     } else if (result === "COMPUTER") {
-        newMsg.textContent = "Oof! These bots have hands!";
+        newMsg.textContent = "Damn! These bots got hands!";
         cScore += 1;
 
     } else {
@@ -124,6 +129,7 @@ function UpdateScore() {
 
 // Cleans necessary elements for a new game
 function NewGame() {
+    currentRound = 0;
     NewRound();
 
     playerSelection.className = DEFAULT_CLASSES;
@@ -143,6 +149,7 @@ function NewGame() {
 // Cleans necessary elements for a new round
 function NewRound() {
     if(msg.classList.contains('error')) msg.classList.remove('error');
+    roundCount.textContent = currentRound;
 }
 
 function DisplayError(err) {
