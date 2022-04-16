@@ -128,7 +128,9 @@ main {
 .selection {
     flex: 0 0 auto;
     align-items: center;
+    justify-content: center;
 
+    width: 15%;
     padding: 10px;
 }
 
@@ -158,4 +160,13 @@ main {
 
 #msg p:not(:first-child) {
     margin: 10px 0 0 0;
+}
+
+/* Misc Styling */
+.error {
+    color: #BA4545;
+}
+
+.selected {
+    color: #EC5555;
 }
