@@ -29,7 +29,8 @@ body {
 
 #header>h1 {
     text-align: center;
-    margin: 10px 0;
+    font-size: 4vw;
+    margin: 1vw 0;
 }
 
 /* Footer */
@@ -41,21 +42,24 @@ body {
     text-align: center;
 }
 
-main {
-    background-color: #181A1D;
-    flex: auto;
-}
-
 /* Content */
 #content {
     align-items: center;
-    padding: 50px 0;
+    justify-content: center;
+    gap: 5vh;
+
+    padding: 2vw 0;
+
+    background-color: #181A1D;
+    flex: auto;
 }
 
 /* Scoreboard */
 #scoreboard {
     text-align: center;
-    gap: 3vw;
+    gap: 2vw;
+
+    width: 20%;
 }
 
 .score {
@@ -74,24 +78,24 @@ main {
 .score h1 {
     margin: 0;
     
-    font-size: 28px;
+    font-size: 2vw;
 
     background-color: #EC5555;
 }
 
 .score p {
     margin: 0;
-    padding: 10px 40px;
+    padding: 1vw;
 
-    font-size: 75px;
+    font-size: 4vw;
     font-weight: bolder;
     
 }
 
 /* Options */
 #options {
-    width: 40vw;
-    gap: 5%;
+    width: 50vw;
+    gap: 2vw;
 
     text-align: center;
 }
@@ -112,9 +116,8 @@ main {
 }
 
 .option i {
-    padding: 25px;
-
-    font-size: 150px;
+    font-size: 10vw;
+    line-height: 15vw;
 }
 
 /* Summary */
@@ -122,7 +125,7 @@ main {
     border: 2px solid #EC5555;
     border-radius: 8px;
 
-    width: 40%;
+    width: 50vw;
 }
 
 .selection {
@@ -130,8 +133,8 @@ main {
     align-items: center;
     justify-content: center;
 
-    width: 15%;
-    padding: 10px;
+    width: 8vw;
+    padding: 1vw;
 }
 
 .selection:first-child {
@@ -143,13 +146,14 @@ main {
 }
 
 .selection > i {
-    font-size: 100px;
+    font-size: 8vw;
 }
 
 #msg {
-    padding: 5px;
+    padding: 0.5vw;
 
     font-weight: bold;
+    font-size: 1vw;
 
     flex: 1 1 auto;
 }
@@ -159,7 +163,7 @@ main {
 }
 
 #msg p:not(:first-child) {
-    margin: 10px 0 0 0;
+    margin: 1vw 0 0 0;
 }
 
 /* End Screen */
@@ -192,7 +196,7 @@ main {
 }
 
 #end-msg {
-    font-size: 36px;
+    font-size: 2vw;
     font-weight: bolder;
 }
 

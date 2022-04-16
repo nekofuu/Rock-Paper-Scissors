@@ -132,6 +132,7 @@ function NewGame() {
     computerSelection.className = DEFAULT_CLASSES;
 
     endMsg.textContent = "";
+    msg.textContent = "Choose your weapon to start playing!";
 
     pScore = 0;
     cScore = 0;
