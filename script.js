@@ -143,10 +143,6 @@ function NewGame() {
 // Cleans necessary elements for a new round
 function NewRound() {
     if(msg.classList.contains('error')) msg.classList.remove('error');
-
-    rock.className = ROCK_CLASSES;
-    paper.className = PAPER_CLASSES;
-    scissors.className = SCISSORS_CLASSES;
 }
 
 function DisplayError(err) {
