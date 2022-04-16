@@ -32,19 +32,17 @@ let pScore = 0, cScore = 0;
 const MAX_SCORE = 5;
 
 // Event listeners
-rock.addEventListener('click', (e) => { PlayRound(e.target, Option.ROCK); });
-paper.addEventListener('click', (e) => { PlayRound(e.target, Option.PAPER); });
-scissors.addEventListener('click', (e) => { PlayRound(e.target, Option.SCISSORS); });
+rock.addEventListener('click', () => { PlayRound(Option.ROCK); });
+paper.addEventListener('click', () => { PlayRound(Option.PAPER); });
+scissors.addEventListener('click', () => { PlayRound(Option.SCISSORS); });
 playBtn.addEventListener('click', NewGame);
 
 function ComputerPlay() {
     return Math.floor(Math.random() * 3);
 }
 
-function PlayRound(selected, playerInput) {
+function PlayRound(playerInput) {
     NewRound();
-
-    selected.classList.add("selected");
 
     let computerInput = ComputerPlay();
     
